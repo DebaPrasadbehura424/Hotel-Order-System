@@ -30,10 +30,11 @@ public class OrderController : ControllerBase
         }
         catch (Exception ex)
         {
+            Console.WriteLine(ex);
+            Console.WriteLine(ex.Message);
             return StatusCode(500, new
             {
                 message = "Error while adding order",
-                error = ex.Message
             });
         }
     }
