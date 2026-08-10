@@ -62,3 +62,52 @@ Backend/
 ├── Program.cs
 └── Backend.csproj
 └── Backend.http
+
+Program.cs
+│
+│ Database configuration
+▼
+DbContextOptions<AppDbContext>
+│
+▼
+AppDbContext constructor
+│
+│ : base(options)
+▼
+DbContext
+│
+▼
+EF Core
+│
+▼
+MySQL
+
+             Program.cs
+                 │
+                 │ DB configuration
+                 ▼
+        DbContextOptions
+                 │
+                 ▼
+          AppDbContext
+                 │
+          ┌──────┴──────┐
+          ▼             ▼
+    DbSet<Order>    DbSet<Food>
+          │
+          ▼
+        EF Core
+          │
+          ▼
+         MySQL
+
+
+
+
+
+// this all provides DbContextOptions
+// Database server = localhost
+// Database = hotel_db
+// Username = root
+// Password = \*\*\*\*
+// MySQL provider
